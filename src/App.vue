@@ -1,26 +1,9 @@
-<template>
-  <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
-</template>
+<script setup lang="ts">
+import { onMounted } from "vue";
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
-
-export default defineComponent({
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data () {
-    return {
-      //
-    }
-  },
-})
+onMounted(async () => {});
 </script>
+
+<template>
+  <h1>Uprodit Challenge</h1>
+</template>
