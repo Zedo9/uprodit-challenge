@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+
+const isActive = ref(false);
 
 onMounted(async () => {});
 </script>
 
 <template>
-  <p>Uprodit Challenge <font-awesome-icon icon="fa-solid fa-user-secret" /></p>
+  <p>Uprodit Challenge</p>
 </template>

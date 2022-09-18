@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import "./style.css";
+import "tw-elements";
 import App from "./App.vue";
 
 /* import the fontawesome core */
@@ -12,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
+// https://fontawesome.com/docs/web/use-with/vue/add-icons
 library.add(faUserSecret);
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
