@@ -5,5 +5,5 @@ onMounted(async () => {});
 </script>
 
 <template>
-  <p>Uprodit Challenge</p>
+  <p>Uprodit Challenge <font-awesome-icon icon="fa-solid fa-user-secret" /></p>
 </template>
