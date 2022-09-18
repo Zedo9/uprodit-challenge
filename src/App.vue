@@ -5,5 +5,5 @@ onMounted(async () => {});
 </script>
 
 <template>
-  <h1>Uprodit Challenge</h1>
+  <p>Uprodit Challenge</p>
 </template>
