@@ -6,8 +6,8 @@ export interface User {
   surname: string;
   gender: Gender;
   image_id: string;
-  usecase: ProfileType;
-  profile_type: ProfileType;
+  usecase: string;
+  profile_type: string;
   tjm: null | string;
   specialities: string[];
   skills: Skill[];
@@ -27,11 +27,6 @@ export interface Achievement {
 export enum Gender {
   Man = "man",
   Woman = "woman",
-}
-
-export enum ProfileType {
-  Free = "free",
-  Perso = "perso",
 }
 
 export interface SearchQuerySettings {

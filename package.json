@@ -5,24 +5,19 @@
   "scripts": {
     "serve": "vite preview",
     "build": "vite build",
-    "dev": "vite",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@quasar/extras": "^1.15.3",
     "axios": "^0.27.2",
-    "tw-elements": "^1.0.0-alpha12",
+    "quasar": "^2.8.3",
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@quasar/vite-plugin": "^1.2.1",
     "@vitejs/plugin-vue": "^3.1.0",
     "autoprefixer": "^10.4.11",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8",
+    "sass": "^1.32.12",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
     "vue-tsc": "^0.40.4"

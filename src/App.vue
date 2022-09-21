@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-
-const isActive = ref(false);
-
-onMounted(async () => {});
+import MainLayout from "./layouts/MainLayout.vue";
 </script>
 
 <template>
-  <p>Uprodit Challenge</p>
+  <MainLayout />
 </template>

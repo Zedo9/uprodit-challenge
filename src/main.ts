@@ -1,19 +1,22 @@
 import { createApp } from "vue";
-import "./style.css";
-import "tw-elements";
+import { Quasar } from "quasar";
+
+// Import icon libraries
+import "@quasar/extras/material-icons/material-icons.css";
+import "@quasar/extras/fontawesome-v6/fontawesome-v6.css";
+
+// Import Quasar css
+import "quasar/src/css/index.sass";
+
+// Assumes your root component is App.vue
+// and placed in same folder as main.js
 import App from "./App.vue";
 
-/* import the fontawesome core */
-import { library } from "@fortawesome/fontawesome-svg-core";
+const myApp = createApp(App);
 
-/* import font awesome icon component */
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+myApp.use(Quasar, {
+  plugins: {}, // import Quasar plugins and add here
+});
 
-/* import specific icons */
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
-
-/* add icons to the library */
-// https://fontawesome.com/docs/web/use-with/vue/add-icons
-library.add(faUserSecret);
-
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
+// Assumes you have a <div id="app"></div> in your index.html
+myApp.mount("#app");
