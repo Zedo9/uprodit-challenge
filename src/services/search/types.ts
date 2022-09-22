@@ -40,6 +40,7 @@ export interface SearchQuerySettings {
   allSpecialitesStr?: string;
   allSkillsStr?: string;
   onlyWithTjm?: boolean;
+  terms?: string;
 }
 
 export interface Skill {

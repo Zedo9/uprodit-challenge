@@ -11,7 +11,7 @@ const client = axios.create({
 
 client.interceptors.request.use(
   async (config) => {
-    if (config.url && !config.url.includes("/v1/authheader")) {
+    if (config.url) {
       const result = generateSignature(config.url);
       config.headers = { ...config.headers, Authorization: result };
     }

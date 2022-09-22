@@ -16,6 +16,7 @@ const name = ref("");
 const phone = ref("");
 const skills = ref("");
 const specialities = ref("");
+const terms = ref("");
 
 const isLoading = ref(false);
 
@@ -76,6 +77,7 @@ async function onSearchClick() {
   searchQuerySettings.telephone = phone.value;
   searchQuerySettings.email = email.value;
   searchQuerySettings.prenom = name.value;
+  searchQuerySettings.terms = terms.value;
 
   users.value = await search(searchQuerySettings);
   isLoading.value = false;
@@ -260,7 +262,7 @@ const domainFilters: QTreeNode[] = [
         <div class="col-xs-12 col-sm-8 row no-wrap">
           <div style="width: 100%">
             <q-input
-              v-model="query"
+              v-model="terms"
               placeholder="Search Freelancers (specialties, skills)"
               filled
               style="min-width: 0px"
