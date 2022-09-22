@@ -47,7 +47,10 @@ onUnmounted(() => {
             icon="menu"
           />
           <q-toolbar-title></q-toolbar-title>
-          <a class="text-secondary" href="https://www.uprodit.com/inscription"
+          <a
+            style="text-decoration: none"
+            class="text-secondary"
+            href="https://www.uprodit.com/inscription"
             ><q-btn
               flat
               dense
@@ -55,7 +58,10 @@ onUnmounted(() => {
               :label="isMobile || miniState ? '' : 'Signup'"
           /></a>
 
-          <a class="text-secondary" href="https://www.uprodit.com/login"
+          <a
+            style="text-decoration: none"
+            class="text-secondary"
+            href="https://www.uprodit.com/login"
             ><q-btn
               flat
               dense
@@ -95,7 +101,7 @@ onUnmounted(() => {
               />
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple href="https://www.uprodit.com/newspaper">
               <q-item-section avatar>
                 <q-icon name="newspaper" />
               </q-item-section>
@@ -103,7 +109,7 @@ onUnmounted(() => {
               <q-item-section> News </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple href="https://www.uprodit.com/stats">
               <q-item-section avatar>
                 <q-icon name="analytics" />
               </q-item-section>
@@ -111,7 +117,7 @@ onUnmounted(() => {
               <q-item-section> Statistics </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple href="https://www.uprodit.com/chat/area">
               <q-item-section avatar>
                 <q-icon name="question_answer" />
               </q-item-section>
@@ -119,7 +125,11 @@ onUnmounted(() => {
               <q-item-section> Chat </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item
+              clickable
+              v-ripple
+              href="https://www.uprodit.com/internal/offer/search"
+            >
               <q-item-section avatar>
                 <q-icon name="work" />
               </q-item-section>
@@ -128,20 +138,30 @@ onUnmounted(() => {
             </q-item>
 
             <q-expansion-item expand-separator icon="search" label="Community">
-              <q-item :content-inset-level="0.5" clickable>
+              <q-item :content-inset-level="0.5" clickable active>
                 <q-item-section avatar> </q-item-section>
 
-                <q-item-section> Freelancer </q-item-section>
+                <q-item-section class="text-white"> Freelancer </q-item-section>
               </q-item>
-              <q-item :content-inset-level="0.5" clickable v-ripple>
+              <q-item
+                :content-inset-level="0.5"
+                clickable
+                v-ripple
+                href="https://www.uprodit.com/profile/all/search/ent"
+              >
                 <q-item-section avatar> </q-item-section>
 
                 <q-item-section> Company </q-item-section>
               </q-item>
-              <q-item :content-inset-level="0.5" clickable v-ripple>
+              <q-item
+                :content-inset-level="0.5"
+                clickable
+                v-ripple
+                href="https://www.uprodit.com/profile/all/search/assoc"
+              >
                 <q-item-section avatar> </q-item-section>
 
-                <q-item-section> Jobs </q-item-section>
+                <q-item-section> Organizations </q-item-section>
               </q-item>
             </q-expansion-item>
 

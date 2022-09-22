@@ -9,9 +9,9 @@ export default defineConfig({
       template: { transformAssetUrls },
     }),
 
-    quasar({
-      autoImportComponentCase: "pascal",
-      sassVariables: "src/quasar-variables.sass",
-    }),
+    // The Quasar Vite plugin is currently broken
+    // quasar({
+    //   sassVariables: "src/quasar-variables.sass",
+    // }),
   ],
 });

@@ -1,5 +1,5 @@
 import { client } from "../axios";
-import { config, apiEndpoints } from "../../config";
+import { apiEndpoints } from "../../config";
 
 interface AuthData {
   appid: string;
@@ -13,8 +13,8 @@ interface AuthResponse {
 
 export async function getAuthHeader(endpoint: string): Promise<string> {
   const authData = {
-    appid: config.appId,
-    env: config.environment,
+    appid: import.meta.env.VITE_APP_ID,
+    env: import.meta.env.VITE_ENVIRONMENT,
     uri: `${client.defaults.baseURL}${endpoint}`,
   };
 

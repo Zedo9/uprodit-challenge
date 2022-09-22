@@ -1,9 +1,9 @@
 import { client } from "../axios";
-import { apiEndpoints, config } from "../../config";
+import { apiEndpoints } from "../../config";
 import { SearchQuerySettings, User } from "./types";
 
 export async function search(
-  querySettings: SearchQuerySettings = { startIndex: 0, maxResults: 10 }
+  querySettings: SearchQuerySettings = { startIndex: 0, maxResults: 20 }
 ): Promise<User[]> {
   const endpoint = buildSearchEndpoint(querySettings);
 
