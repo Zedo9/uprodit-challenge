@@ -3,10 +3,8 @@ import hmacsha1 from 'hmacsha1'
 import { v4 } from 'uuid'
 
 const generateSignature = (uri: string) => {
-    // TODO: use environment variables
-    var appid = "challenge_uprodit"
-    var env = "production"
-
+    var appid = `${import.meta.env.VITE_APP_ID}`
+    var env = `${import.meta.env.VITE_ENVIRONMENT}`
     var auth_signature_method = 'HMAC-SHA1';
     var auth_consumer_key = encodeURIComponent(hmacsha1(appid, env));
     var auth_token = v4();
