@@ -12,7 +12,7 @@ interface AuthResponse {
 }
 
 export async function getAuthHeader(endpoint: string): Promise<string> {
-  const authData = {
+  const authData: AuthData = {
     appid: import.meta.env.VITE_APP_ID,
     env: import.meta.env.VITE_ENVIRONMENT,
     uri: `${client.defaults.baseURL}${endpoint}`,

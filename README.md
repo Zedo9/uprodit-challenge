@@ -25,4 +25,4 @@ You can also use the provided Docker setup by running:
 docker-compose up
 ```
 
-_A live preview of the website is available on Netlify._
+_A live preview of the website is available on [Netlify](https://632c55dcc4109320b602e3a7--cool-mooncake-0099fd.netlify.app/)._
