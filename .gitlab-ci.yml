@@ -1,5 +1,5 @@
 stages:
-  - mirror
+  - publish
   - build
   - deploy
 
