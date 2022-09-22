@@ -10,7 +10,9 @@
   "dependencies": {
     "@quasar/extras": "^1.15.3",
     "axios": "^0.27.2",
+    "hmacsha1": "^1.0.0",
     "quasar": "^2.8.3",
+    "uuid": "^9.0.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {

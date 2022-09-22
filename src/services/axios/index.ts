@@ -1,6 +1,6 @@
 import axios from "axios";
 import { apiEndpoints } from "../../config";
-import { getAuthHeader } from "../auth";
+import generateSignature from "../utils/signature";
 
 const client = axios.create({
   baseURL: apiEndpoints.baseURL,
@@ -12,7 +12,7 @@ const client = axios.create({
 client.interceptors.request.use(
   async (config) => {
     if (config.url && !config.url.includes("/v1/authheader")) {
-      const result = await getAuthHeader(config.url);
+      const result = generateSignature(config.url);
       config.headers = { ...config.headers, Authorization: result };
     }
 
