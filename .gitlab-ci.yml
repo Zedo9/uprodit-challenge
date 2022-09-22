@@ -1,0 +1,25 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - imagesbuilder
+  only:
+    - /^(main|develop).*$/
+  script:
+    - chmod +x ./ci/deliver.sh
+    - ./ci/deliver.sh
+
+deploy:
+  stage: deploy
+  needs:
+    - build
+  script:
+    - chmod +x ./ci/deploy.sh
+    - ./ci/deploy.sh
+  only:
+    - /^(main|develop).*$/
+  tags:
+    - web

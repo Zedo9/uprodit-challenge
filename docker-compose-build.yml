@@ -1,0 +1,7 @@
+version: '3.3'
+
+services:
+  uprodit_vue:
+    restart: always
+    image: uprodit_vue:latest
+    build: .
