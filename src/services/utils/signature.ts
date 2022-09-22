@@ -1,3 +1,4 @@
+// @ts-ignore
 import hmacsha1 from 'hmacsha1'
 import { v4 } from 'uuid'
 
