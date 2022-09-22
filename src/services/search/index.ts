@@ -16,7 +16,7 @@ function buildSearchEndpoint(querySettings: SearchQuerySettings) {
   let endpoint = `${apiEndpoints.search}`;
 
   Object.entries(querySettings).forEach(
-    ([key, value]) => (endpoint += `&${key}=${value}`)
+    ([key, value]) => (endpoint += (key == "startIndex" || (key && value)) ? `&${key}=${value}` : '')
   );
 
   return endpoint;

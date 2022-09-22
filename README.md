@@ -22,7 +22,7 @@ To get started working locally with the project:
 You can also use the provided Docker setup by running:
 
 ```
-docker-compose up
+docker-compose up --build --force-recreate
 ```
 
-_A live preview of the website is available on [Netlify](https://632c55dcc4109320b602e3a7--cool-mooncake-0099fd.netlify.app/)._
+_A live preview of the website is available [here](https://vue.uprodit.com)._

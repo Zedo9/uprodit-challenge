@@ -1,0 +1,35 @@
+stages:
+  - publish
+  - build
+  - deploy
+
+mirror:
+  stage: publish
+  script:
+    - setsid ./ci/mirror.sh
+  only:
+    - /^(main.*)$/
+  tags:
+    - mirror
+
+build:
+  stage: build
+  tags:
+    - imagesbuilder
+  only:
+    - /^(main|develop).*$/
+  script:
+    - chmod +x ./ci/deliver.sh
+    - ./ci/deliver.sh
+
+deploy:
+  stage: deploy
+  needs:
+    - build
+  script:
+    - chmod +x ./ci/deploy.sh
+    - ./ci/deploy.sh
+  only:
+    - /^(main|develop).*$/
+  tags:
+    - web
